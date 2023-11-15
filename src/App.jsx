@@ -1,7 +1,9 @@
-import './App.css';
-
 function App() {
-  return <>AWS</>;
+  return (
+    <div>
+      <h1 className='text-red-600'>AWS</h1>
+    </div>
+  );
 }
 
 export default App;
