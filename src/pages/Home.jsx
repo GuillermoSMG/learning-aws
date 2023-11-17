@@ -6,7 +6,7 @@ const Home = () => {
     <main className='flex'>
       <SideMenu />
       <div className='flex justify-center items-center w-full'>
-        <h2>Home</h2>
+        <img src='https://inforges.es/wp-content/uploads/2022/07/migracion-aws.png' />
       </div>
     </main>
   );
