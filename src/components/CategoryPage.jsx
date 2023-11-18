@@ -6,7 +6,7 @@ const CategoryPage = () => {
   return (
     <main className='flex'>
       <SideMenu />
-      <div className='w-full'>{category.name}</div>
+      <div className='w-full'>{category.name.split('-').join(' ')}</div>
     </main>
   );
 };
