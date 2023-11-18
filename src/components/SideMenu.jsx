@@ -7,7 +7,7 @@ const SideMenu = () => {
       <nav >
         <ul>
           {CATEGORIES.map((cat, i) => (
-            <li key={i} className='hover:bg-orange-300 cursor-pointer' >
+            <li key={i} className='hover:bg-orange-300 cursor-pointer text-lg ml-1' >
               <Link
                 to={`/category/${cat.split(' ').join('-').toLocaleLowerCase()}`}
               >
