@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { CATEGORIES } from '../const/menuCategories';
 import { useState } from 'react';
+import { ArrowRight } from '../icons/ArrowRight';
 
 const SideMenu = () => {
   const [open, setOpen] = useState(true);
@@ -16,7 +17,7 @@ const SideMenu = () => {
       } flex-col items-end`}
     >
       <p className='mx-4 cursor-pointer' onClick={toggleMenu()}>
-        {open ? 'x' : '>'}
+        {open ? 'x' : <ArrowRight />}
       </p>
       {open && (
         <nav>
