@@ -1,23 +1,26 @@
 import { Link } from 'react-router-dom';
 import { CATEGORIES } from '../const/menuCategories';
-import { useState } from 'react';
 import { ArrowRight } from '../icons/ArrowRight';
+import { Bars } from '../icons/Bars';
+import { useState } from 'react';
+
 
 const SideMenu = () => {
   const [open, setOpen] = useState(true);
   const toggleMenu = () => () => {
     setOpen(!open);
   };
+
   return (
     <aside
-      className={`${open ? 'min-h-screen' : 'h-auto'} flex ${
+      className={ `${open ? 'min-h-screen' : 'h-auto'} flex ${
         open ? 'bg-slate-600' : 'bg-transparent'
       } ${open ? 'text-white' : 'text-black'} ${
-        open ? 'w-[275px]' : 'w-auto'
+        open ? 'w-[275px]' : 'w-9 '
       } flex-col items-end`}
     >
-      <p className='mx-4 cursor-pointer' onClick={toggleMenu()}>
-        {open ? 'x' : <ArrowRight />}
+      <p className='mx-4 cursor-pointer -mt-1' onClick={toggleMenu()}>
+        {open ? <Bars/> : <ArrowRight />}
       </p>
       {open && (
         <nav>
@@ -25,7 +28,7 @@ const SideMenu = () => {
             {CATEGORIES.map((cat, i) => (
               <Link
                 key={i}
-                className='hover:bg-orange-300 block cursor-pointer text-lg ml-1'
+                className='hover:bg-orange-300 block cursor-pointer text-lg'
                 to={`/category/${cat.split(' ').join('-').toLocaleLowerCase()}`}
               >
                 {cat}
