@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { CATEGORIES } from '../const/menuCategories';
 import { useState } from 'react';
-import { ArrowRight } from '../icons/ArrowRight';
+import { ArrowRight } from '../icons/Icons';
 
 const SideMenu = () => {
   const [open, setOpen] = useState(true);

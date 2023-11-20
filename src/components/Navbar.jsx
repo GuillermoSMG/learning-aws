@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
   return (
@@ -8,6 +9,7 @@ const Navbar = () => {
           <h1 className='text-4xl font-bold'>LAWS</h1>
         </Link>
         {/* <SearchBar /> */}
+        <ThemeToggle />
       </div>
     </header>
   );
