@@ -3,8 +3,10 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import CategoryPage from './components/CategoryPage';
 import ThemeContextContainer from './components/ThemeContext';
+import { addoc } from './services/setItem';
 
-function App() {
+ function App () {
+addoc() 
   return (
     <ThemeContextContainer>
       <BrowserRouter>
