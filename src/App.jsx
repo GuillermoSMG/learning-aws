@@ -1,12 +1,17 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
 import CategoryPage from './components/CategoryPage';
+import Navbar from './components/Navbar';
 import ThemeContextContainer from './components/ThemeContext';
-import { addoc } from './services/setItem';
+import Home from './pages/Home';
+import { getFirebase } from './services/fetchDatabase';
 
- function App () {
-addoc() 
+function App () {
+
+    fetch(getFirebase())
+    .then(res => res.json)
+    .then(data => console.log(data))
+  
+  
   return (
     <ThemeContextContainer>
       <BrowserRouter>
@@ -16,7 +21,8 @@ addoc()
           <Route path='/category/:name' element={<CategoryPage />} />
         </Routes>
       </BrowserRouter>
-    </ThemeContextContainer>
+     </ThemeContextContainer>
+    
   );
 }
 
