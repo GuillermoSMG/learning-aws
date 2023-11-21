@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import SideMenu from './SideMenu';
+import { SideMenu } from './SideMenu';
 
 const CategoryPage = () => {
   const category = useParams();

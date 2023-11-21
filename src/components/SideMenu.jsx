@@ -3,14 +3,14 @@ import { CATEGORIES } from '../const/menuCategories';
 import { useState } from 'react';
 import { ArrowRight } from '../icons/Icons';
 
-const SideMenu = () => {
-  const [open, setOpen] = useState(true);
+export const SideMenu = () => {
+  const [open, setOpen] = useState(false);
   const toggleMenu = () => () => {
     setOpen(!open);
   };
   return (
     <aside
-      className={`${open ? 'min-h-screen' : 'h-auto'} flex ${
+      className={`${open ? 'h-full' : 'h-auto'} flex ${
         open ? 'bg-slate-600' : 'bg-transparent'
       } ${open ? 'text-white' : 'text-black'} ${
         open ? 'w-[275px]' : 'w-auto'
@@ -37,5 +37,3 @@ const SideMenu = () => {
     </aside>
   );
 };
-
-export default SideMenu;

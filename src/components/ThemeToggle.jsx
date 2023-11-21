@@ -7,7 +7,7 @@ const ThemeToggle = () => {
   const icon = theme === 'dark' ? <Sun /> : <Moon />;
 
   return (
-    <button onClick={handleTheme} className='text-xl'>
+    <button onClick={handleTheme} className='text-xl mr-4'>
       {icon}
     </button>
   );

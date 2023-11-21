@@ -1,13 +1,11 @@
 import React from 'react';
-import SideMenu from '../components/SideMenu';
+import { SideMenu } from '../components/SideMenu';
 
 const Home = () => {
   return (
-    <main className='flex'>
+    <main className='flex min-h-full'>
       <SideMenu />
-      <div className='flex justify-center items-center w-full'>
-        <img src='https://inforges.es/wp-content/uploads/2022/07/migracion-aws.png' />
-      </div>
+      <div className='flex justify-center items-center w-full'></div>
     </main>
   );
 };
