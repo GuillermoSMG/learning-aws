@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 import { CATEGORIES } from '../const/menuCategories';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { ArrowRight } from '../icons/Icons';
+import { themeContext } from './ThemeContext';
 
 export const SideMenu = () => {
   const [open, setOpen] = useState(false);
+  const { theme } = useContext(themeContext);
   const toggleMenu = () => () => {
     setOpen(!open);
   };
@@ -14,10 +16,15 @@ export const SideMenu = () => {
         open ? 'bg-slate-600' : 'bg-transparent'
       } ${open ? 'text-white' : 'text-black'} ${
         open ? 'w-[275px]' : 'w-auto'
-      } flex-col items-end`}
+      } flex-col items-end
+      relative`}
     >
       <p className='mx-4 cursor-pointer' onClick={toggleMenu()}>
-        {open ? 'x' : <ArrowRight />}
+        {open ? (
+          'x'
+        ) : (
+          <ArrowRight color={theme === 'light' ? '#000' : '#fff'} />
+        )}
       </p>
       {open && (
         <nav>

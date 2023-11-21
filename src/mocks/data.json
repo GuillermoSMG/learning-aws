@@ -1,0 +1,20 @@
+{
+  "labs": {
+    "lab1": {
+      "title": "lab1",
+      "description": "asfiashngoisngoign",
+      "context": "aqui imagen",
+      "architecture": "aqui otra imagen",
+      "steps": {
+        "step1": {
+          "desc": "tal cosa",
+          "img": "img"
+        },
+        "step2": {
+          "desc": "tal cosa",
+          "img": "img"
+        }
+      }
+    }
+  }
+}
