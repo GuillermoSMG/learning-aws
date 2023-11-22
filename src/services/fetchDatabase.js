@@ -10,6 +10,7 @@ export const getFirebase = () => {
     const arrayNorm = res.docs.map(element => {
       return {
         id: element.id,
+        category: element.data().category,
         title: element.data().title,
         description: element.data().description,
         context: element.data().context,

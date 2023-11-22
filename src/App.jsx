@@ -2,12 +2,15 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CategoryPage from './components/CategoryPage';
 import Navbar from './components/Navbar';
 import ThemeContextContainer from './components/ThemeContext';
-import { useFetchData } from './hooks/useFetchData.jsx';
 import Home from './pages/Home';
+import { useEffect } from 'react';
+import { useLabsStore } from './store/labs';
 
 function App() {
-  const { data } = useFetchData();
-  console.log(data);
+  const { fetchLabs } = useLabsStore(state => state);
+  useEffect(() => {
+    fetchLabs();
+  }, []);
   return (
     <ThemeContextContainer>
       <BrowserRouter>
