@@ -1,12 +1,13 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
 import CategoryPage from './components/CategoryPage';
+import Navbar from './components/Navbar';
 import ThemeContextContainer from './components/ThemeContext';
-import { addoc } from './services/setItem';
+import { useFetchData } from './hooks/useFetchData.jsx';
+import Home from './pages/Home';
 
- function App () {
-addoc() 
+function App() {
+  const { data } = useFetchData();
+  console.log(data);
   return (
     <ThemeContextContainer>
       <BrowserRouter>
